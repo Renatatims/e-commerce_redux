@@ -6,6 +6,10 @@
 
   ![preview](/client/src/assets/screenshots/Capture1.PNG "Preview Application")
 
+  ## Link to Application
+
+  Link to application available at: https://e-commerce-redux.herokuapp.com/
+
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
