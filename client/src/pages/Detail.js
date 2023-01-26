@@ -3,7 +3,12 @@ import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import Cart from '../components/Cart';
-import { useStoreContext } from '../utils/GlobalState';
+//*DELETED the following:
+//import { useStoreContext } from '../utils/GlobalState';
+
+//*ADDED:
+import { useDispatch, useSelector } from 'react-redux';
+
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
@@ -15,7 +20,13 @@ import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 
 function Detail() {
-  const [state, dispatch] = useStoreContext();
+  //*DELETED:
+  //const [state, dispatch] = useStoreContext();
+
+  //*ADDED:
+  const dispatch = useDispatch();
+  const state = useSelector(state => state);
+
   const { id } = useParams();
 
   const [currentProduct, setCurrentProduct] = useState({});
